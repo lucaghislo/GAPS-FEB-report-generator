@@ -1,19 +1,23 @@
 from FEB_report_fun import report_ENC, report_pedestal, report_temperature, report_thrdisp
+from FEB_report_fun import ftxt_a, ftxt_w
 import re
 import math
 from matplotlib import lines
 import os
+from pathlib import Path
 
 
 # acquisizione directory
 def print_report(num_report):
-
     if num_report < 10:
         intermediate_path = "MODULE_00" + str(num_report)
+        show = "F00" + str(i) + "I"
     elif num_report < 100:
         intermediate_path = "MODULE_0" + str(num_report)
+        show = "F0" + str(i) + "I"
     else:
         intermediate_path = "MODULE_" + str(num_report)
+        show = "F" + str(i) + "I"
 
     intermediate_path = intermediate_path + "/1/"
 
@@ -33,17 +37,31 @@ def print_report(num_report):
     dir_ped = os.path.dirname(__file__)
     file_ped = os.path.join(dir_ped, '../script_files/' + intermediate_path + 'data/Pedestals.dat')
 
-    report_temperature(file_temp)
-    report_ENC(file_ENC)
-    report_thrdisp(file_thr)
-    report_pedestal(file_ped)
+    if Path(file_temp).is_file():
+        ftxt_a.write("***** MODULE #" + show + " ******\n")
+        report_temperature(file_temp)
+
+    if Path(file_ENC).is_file():
+        report_ENC(file_ENC)
+
+    if Path(file_thr).is_file():
+        report_thrdisp(file_thr)
+
+    if Path(file_ped).is_file():
+        report_pedestal(file_ped)
+        ftxt_a.write(" \n")
+        ftxt_a.write("----------------------------------------------\n")
+        ftxt_a.write(" \n")
 
 
 # main call
 start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
+#ftxt_w.write("")
+
 for i in range(start, stop+1):
     print_report(i)
-    print("\n")
 
+ftxt_w.close()
+ftxt_a.close()
