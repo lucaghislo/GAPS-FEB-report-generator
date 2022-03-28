@@ -2,11 +2,15 @@ import re
 import math
 from matplotlib import lines
 import os
+import textwrap
+from fpdf import FPDF
 
+# report_output.txt 
 dir_txt = os.path.dirname(__file__)
-file_txt = os.path.join(dir_txt, '../script_files/report_output.txt')
+file_txt = os.path.join(dir_txt, '../report_output.txt')
 ftxt_w = open(file_txt, 'w+')
 ftxt_a = open(file_txt, 'a')
+ftxt_r = open(file_txt, 'r')
 
 # temperatura
 def report_temperature(file_temp):
@@ -26,7 +30,7 @@ def report_temperature(file_temp):
 
     ADC_code = int(sum/count)
     V_T = 0.9*1000 - (ADC_code - 1024)*1.72/(3.87)
-    T = 30 + (5.506 - math.sqrt((-5.506)**2 + 4*.00176*(870.6 - V_T)))/(2*(-0.00176))
+    T = 30 + (5.506 - math.sqrt((-5.506)**2 + 4*0.00176*(870.6 - V_T)))/(2*(-0.00176))
 
     ftxt_a.write(" Temperature sensor [°C]: " + str(round(T,3)) +"\n\n")
 
@@ -36,7 +40,7 @@ def report_ENC(file_ENC):
     with open(file_ENC) as f:
         lines_enc = f.readlines()
 
-    ftxt_a.write("*** NOISE ENC ***\n\n")
+    ftxt_a.write("*** NOISE ENC [keV] ***\n\n")
 
     count = 0
 
@@ -83,5 +87,33 @@ def report_pedestal(file_ped):
             sum = sum + float(str_tm[3])
             count = count + 1
 
-    ftxt_a.write("\n*** PEDESTAL DISPERSION ***\n")
+    ftxt_a.write("*** PEDESTAL DISPERSION ***\n")
     ftxt_a.write("\nPedestal dispersion [ADC]: " + str(round(sum/count, 3))+"\n")
+
+
+# convert report_output.txt to PDF
+def text_to_pdf(text, filename):
+    a4_width_mm = 210
+    pt_to_mm = 0.35
+    fontsize_pt = 10
+    fontsize_mm = fontsize_pt * pt_to_mm
+    margin_bottom_mm = 10
+    character_width_mm = 7 * pt_to_mm
+    width_text = a4_width_mm / character_width_mm
+
+    pdf = FPDF(orientation='P', unit='mm', format='A4')
+    pdf.set_auto_page_break(True, margin=margin_bottom_mm)
+    pdf.add_page()
+    pdf.set_font(family='Courier', size=fontsize_pt)
+    splitted = text.split('\n')
+
+    for line in splitted:
+        lines = textwrap.wrap(line, width_text)
+
+        if len(lines) == 0:
+            pdf.ln()
+
+        for wrap in lines:
+            pdf.cell(0, fontsize_mm, wrap, ln=1)
+
+    pdf.output(filename, 'F')

@@ -1,5 +1,5 @@
-from FEB_report_fun import report_ENC, report_pedestal, report_temperature, report_thrdisp
-from FEB_report_fun import ftxt_a, ftxt_w
+from FEB_report_fun import report_ENC, report_pedestal, report_temperature, report_thrdisp, text_to_pdf
+from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
 import re
 import math
 from matplotlib import lines
@@ -38,7 +38,7 @@ def print_report(num_report):
     file_ped = os.path.join(dir_ped, '../script_files/' + intermediate_path + 'data/Pedestals.dat')
 
     if Path(file_temp).is_file():
-        ftxt_a.write("***** MODULE #" + show + " ******\n")
+        ftxt_a.write("***** MODULE " + show + " ******\n")
         report_temperature(file_temp)
 
     if Path(file_ENC).is_file():
@@ -58,10 +58,12 @@ def print_report(num_report):
 start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
-#ftxt_w.write("")
-
 for i in range(start, stop+1):
     print_report(i)
 
 ftxt_w.close()
 ftxt_a.close()
+
+text = ftxt_r.read()
+ftxt_r.close()
+text_to_pdf(text, '../report_output.pdf')
