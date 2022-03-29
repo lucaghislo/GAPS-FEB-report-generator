@@ -3,7 +3,7 @@
 *** TEMPERATURE SENSOR ***
 
 Temperature sensor [ADC]: 1058
- Temperature sensor [Â°C]: 27.403
+ Temperature sensor [°C]: 27.403
 
 *** NOISE ENC [keV] ***
 
