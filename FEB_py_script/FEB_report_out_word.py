@@ -1,3 +1,8 @@
+from __future__ import print_function
+from pickle import FALSE, TRUE
+from mailmerge import MailMerge
+from datetime import date
+
 from FEB_report_fun import report_ENC, report_pedestal, report_temperature, report_thrdisp, text_to_pdf
 from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
 import re
@@ -7,13 +12,12 @@ import os
 from pathlib import Path
 from datetime import date
 
-from io import StringIO 
-from docx.shared import Cm
-from docxtpl import DocxTemplate, InlineImage
-
 
 # acquisizione directory
 def print_report(num_report):
+
+    flag = False
+
     if num_report < 10:
         intermediate_path = "MODULE_00" + str(num_report)
         show = "F00" + str(i) + "I"
@@ -45,6 +49,7 @@ def print_report(num_report):
     if Path(file_temp).is_file():
         ftxt_a.write("***** MODULE " + show + " ******\n")
         report_temperature(file_temp)
+        flag = True
 
     if Path(file_ENC).is_file():
         report_ENC(file_ENC)
@@ -58,63 +63,29 @@ def print_report(num_report):
         ftxt_a.write("----------------------------------------------\n")
         ftxt_a.write(" \n")
 
-
-def get_context():
-    return {
-        'invoice_no': 12345,
-        'date': '30 Mar',
-        'due_date': '30 Apr',
-        'name': 'Jane Doe',
-        'address': '123 Quiet Lane',
-        'subtotal': 335,
-        'tax_amt': 10,
-        'total': 345,
-        'amt_paid': 100,
-        'amt_due': 245,
-        'row_contents': [
-            {
-                'description': 'Eggs',
-                'quantity': 30,
-                'rate': 5,
-                'amount': 150
-            }, {
-                'description': 'All Purpose Flour',
-                'quantity': 10,
-                'rate': 15,
-                'amount': 150
-            }, {
-                'description': 'Eggs',
-                'quantity': 5,
-                'rate': 7,
-                'amount': 35
-            }
-        ]
-    }
-
-
-def from_template(template, signature):
-    target_file = StringIO()
-
-    template = DocxTemplate(template)
-    context = get_context()  # gets the context used to render the document
-
-    img_size = Cm(7)  # sets the size of the image
-    sign = InlineImage(template, signature, img_size)
-    context['signature'] = sign  # adds the InlineImage object to the context
-
-    target_file = StringIO()
-    template.render(context)
-    template.save(target_file)
-
-    return target_file
+    return flag
 
 
 # main call
 start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
+document = MailMerge('FEB_py_script/template.docx')
+
 for i in range(start, stop+1):
-    print_report(i)
+    flag = print_report(i)
+
+    if(flag):
+        document.merge(
+        board_ID = '5',
+        date = '5',
+        asic_ID = '5',
+        AVDD = '5',
+        IVDD = '5',
+        DVDD = '5',
+        IDVDD = '5')
+
+        document.write('report_word/F' + str(i) + 'I.docx')
 
 ftxt_w.close()
 ftxt_a.close()
