@@ -91,19 +91,38 @@ def print_report(num_report):
 start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
-document = MailMerge("template.docx")
-
 for i in range(start, stop + 1):
     flag = print_report(i)
 
+    document = MailMerge("test_report_FEB.docx")
+
     if flag:
+
+        if i < 10:
+            ID_number = "00" + str(i)
+        elif i < 100:
+            ID_number = "00" + str(i)
+        else:
+            ID_number = str(i)
+
+        today = date.today()
+        today = today.strftime("%d.%m.%Y")
+
         document.merge(
-            board_ID="5", date="5", asic_ID="5", AVDD="5", IVDD="5", DVDD="5", IDVDD="5"
+            board_ID_title=ID_number,
+            nation_letter="I",
+            board_ID="F" + str(ID_number) + "I",
+            doc_version="0.1",
+            date=today,
+            author="L. Ghislotti",
+            asic_ID=ID_number,
+            nation_word="Italian",
         )
 
-        document.write("../report_word/F" + str(i) + "I.docx")
+        document.write("../report_word/F" + str(ID_number) + "I" + ".docx")
         convert(
-            "../report_word/F" + str(i) + "I.docx", "../report_PDF/F" + str(i) + "I.pdf"
+            "../report_word/F" + str(ID_number) + "I" + ".docx",
+            "../report_PDF/F" + str(ID_number) + "I" + ".pdf",
         )
 
 ftxt_w.close()
