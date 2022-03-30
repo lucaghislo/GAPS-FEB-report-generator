@@ -1,4 +1,4 @@
-***** MODULE F222I ******
+***** MODULE F050I ******
 
 *** TEMPERATURE SENSOR ***
 
@@ -21,7 +21,7 @@ Before FT [DAC]: 4.859
 
 *** PEDESTAL DISPERSION ***
 
-Pedestal dispersion [ADC]: 7.4
+Pedestal dispersion [ADC]: 7.400
  
 ----------------------------------------------
  
@@ -48,7 +48,7 @@ Before FT [DAC]: 4.859
 
 *** PEDESTAL DISPERSION ***
 
-Pedestal dispersion [ADC]: 7.4
+Pedestal dispersion [ADC]: 7.400
  
 ----------------------------------------------
  
