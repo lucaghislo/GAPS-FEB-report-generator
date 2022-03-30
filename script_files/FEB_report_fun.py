@@ -246,6 +246,7 @@ def text_to_pdf(text, filename):
     pdf.output(filename, "F")
 
 
+# defect notes
 def defect_notes(module_number):
     notes = ""
 

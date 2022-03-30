@@ -1,27 +1,108 @@
-***** MODULE F050I ******
+***** MODULE F164I ******
 
 *** TEMPERATURE SENSOR ***
 
-Temperature sensor [ADC]: 1058
- Temperature sensor [°C]: 27.403
+Temperature sensor [ADC]: 1028
+ Temperature sensor [°C]: 24.975
 
 *** NOISE ENC [keV] ***
 
- Canale 0: 5.151
- Canale 7: 30.645
-Canale 15: 8.509
-Canale 16: 6.435
-Canale 23: 26.931
-Canale 31: 5.229
+ Canale 0: 23.179
+ Canale 7: 116.767
+Canale 15: 32.081
+Canale 16: 25.876
+Canale 23: 123.207
+Canale 31: 23.178
 
 *** THRESHOLD DISPERSION ***
 
-Before FT [DAC]: 4.859
- After FT [DAC]: 2.747
+Before FT [DAC]: 5.316
+ After FT [DAC]: 2.940
 
 *** PEDESTAL DISPERSION ***
 
-Pedestal dispersion [ADC]: 7.400
+Pedestal dispersion [ADC]: 31.385
+ 
+----------------------------------------------
+ 
+***** MODULE F183I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1040
+ Temperature sensor [°C]: 25.947
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 19.194
+ Canale 7: 112.494
+Canale 15: 26.947
+Canale 16: 23.927
+Canale 23: 111.065
+Canale 31: 21.425
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 5.687
+ After FT [DAC]: 3.216
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 28.349
+ 
+----------------------------------------------
+ 
+***** MODULE F226I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1025
+ Temperature sensor [°C]: 24.732
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 20.013
+ Canale 7: 99.460
+Canale 15: 26.374
+Canale 16: 23.128
+Canale 23: 113.883
+Canale 31: 21.517
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 6.090
+ After FT [DAC]: 3.556
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 29.334
+ 
+----------------------------------------------
+ 
+***** MODULE F251I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1027
+ Temperature sensor [°C]: 24.894
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 22.038
+ Canale 7: 108.459
+Canale 15: 30.471
+Canale 16: 29.172
+Canale 23: 133.488
+Canale 31: 25.456
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.535
+ After FT [DAC]: 2.037
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 32.542
  
 ----------------------------------------------
  
