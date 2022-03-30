@@ -69,7 +69,7 @@ ftxt_r = open(file_txt, "r")
 def get_bias_data(module_number):
     module_data = []
 
-    with open("../multimeter_data/FEB_testing - Multimeter.csv") as csv_file:
+    with open("../CSV_tables/FEB_testing - Multimeter.csv") as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=",")
         line_count = 0
 
@@ -244,3 +244,64 @@ def text_to_pdf(text, filename):
             pdf.cell(0, fontsize_mm, wrap, ln=1)
 
     pdf.output(filename, "F")
+
+
+def defect_notes(module_number):
+    notes = ""
+
+    with open("../CSV_tables/FEB_testing - Defects.csv") as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=",")
+        line_count = 0
+        flag = False
+
+        for row in csv_reader:
+            if line_count == 0:
+                line_count += 1
+            else:
+                if row[0] == str(module_number):
+                    if row[1] == "x":
+                        notes = "scratches on top"
+                        flag = True
+                    if row[2] == "x":
+                        if not (flag):
+                            notes = notes + "exposed copper on top"
+                            flag = True
+                        else:
+                            notes = notes + "\n" + "exposed copper on top"
+
+                    if row[3] == "x":
+                        if not (flag):
+                            notes = notes + "solid defect on top"
+                            flag = True
+                        else:
+                            notes = notes + "\n" + "solid defect on top"
+
+                    if row[4] == "x":
+                        if not (flag):
+                            notes = notes + "scratches on bottom"
+                            flag = True
+                        else:
+                            notes = notes + "\n" + "scratches on bottom"
+
+                    if row[5] == "x":
+                        if not (flag):
+                            notes = notes + "exposed copper on bottom"
+                            flag = True
+                        else:
+                            notes = notes + "\n" + "exposed copper on bottom"
+
+                    if row[6] == "x":
+                        if not (flag):
+                            notes = notes + "solid defect on bottom"
+                            flag = True
+                        else:
+                            notes = notes + "\n" + "solid defect on bottom"
+
+                    if row[7] != "":
+                        if not (flag):
+                            notes = notes + str(row[7])
+                            flag = True
+                        else:
+                            notes = notes + "\n" + str(row[7])
+
+    return notes

@@ -12,6 +12,7 @@ from FEB_report_fun import (
     text_to_pdf,
     get_bias_data,
     read_config_file,
+    defect_notes,
 )
 from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
 import re
@@ -72,20 +73,16 @@ def print_report(num_report):
     if Path(file_temp).is_file():
         ftxt_a.write("***** MODULE " + show + " ******\n")
         temp_data = report_temperature(file_temp)
-        print(temp_data)
         flag = True
 
     if Path(file_ENC).is_file():
         ENC_data = report_ENC(file_ENC)
-        print(ENC_data)
 
     if Path(file_thr).is_file():
         thrdisp_data = report_thrdisp(file_thr)
-        print(thrdisp_data)
 
     if Path(file_ped).is_file():
         pedestal_data = report_pedestal(file_ped)
-        print(pedestal_data)
         ftxt_a.write(" \n")
         ftxt_a.write("----------------------------------------------\n")
         ftxt_a.write(" \n")
@@ -101,6 +98,7 @@ for i in range(start, stop + 1):
     report_data = print_report(i)
     bias_data = get_bias_data(i)
     config_data = read_config_file()
+    report_notes = defect_notes(i)
     document = MailMerge("../report_template/test_report_FEB.docx")
 
     if report_data[0]:
@@ -110,6 +108,8 @@ for i in range(start, stop + 1):
             ID_number = "0" + str(i)
         else:
             ID_number = str(i)
+
+        print("\nMODULE F" + str(ID_number) + config_data[0])
 
         document.merge(
             board_ID_title=ID_number,
@@ -142,6 +142,7 @@ for i in range(start, stop + 1):
             thr_disp_bef=report_data[3][0],
             thr_disp_aft=report_data[3][1],
             ped_disp=report_data[4],
+            notes=report_notes,
         )
 
         document.write("../report_word/F" + str(ID_number) + "I" + ".docx")
