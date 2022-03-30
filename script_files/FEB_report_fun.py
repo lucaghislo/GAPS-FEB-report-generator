@@ -24,18 +24,18 @@ def read_config_file():
         lines = f.readlines()
 
         nation_letter = re.search(
-            "nation_letter = '(.*?)';        # nationality letter identifier",
-            str(lines[0]),
+            "nation_letter = '(.*?)'         # nationality letter identifier",
+            lines[0],
         ).group(1)
 
         doc_version = re.search(
-            "doc_version = '(.*?)';        # document version",
-            str(lines[1]),
+            "doc_version = '(.*?)'         # document version",
+            lines[1],
         ).group(1)
 
         data = re.search(
-            "date = '(.*?)';        # if empty date is set to current date",
-            str(lines[2]),
+            "date = '(.*?)'         # if empty date is set to current date",
+            lines[2],
         ).group(1)
 
         if data == "":
@@ -44,13 +44,13 @@ def read_config_file():
             data = today
 
         author = re.search(
-            "author = '(.*?)';    # report author",
-            str(lines[3]),
+            "author = '(.*?)'     # report author",
+            lines[3],
         ).group(1)
 
         nation_word = re.search(
-            "nation_word = '(.*?)';    # nationality identifier word",
-            str(lines[4]),
+            "nation_word = '(.*?)'      # nationality identifier word",
+            lines[4],
         ).group(1)
 
         counter = counter + 1
