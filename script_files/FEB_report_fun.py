@@ -4,6 +4,7 @@ from matplotlib import lines
 import os
 import textwrap
 from fpdf import FPDF
+import csv
 
 # report_output.txt
 dir_txt = os.path.dirname(__file__)
@@ -11,6 +12,42 @@ file_txt = os.path.join(dir_txt, "../report_output.txt")
 ftxt_w = open(file_txt, "w+")
 ftxt_a = open(file_txt, "a")
 ftxt_r = open(file_txt, "r")
+
+# bias readings
+def get_bias_data(module_number):
+    module_data = []
+
+    with open("../multimeter_data/FEB_testing - Multimeter.csv") as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=",")
+        line_count = 0
+
+        for row in csv_reader:
+            if line_count == 0:
+                print(f'Column names are {", ".join(row)}')
+                line_count += 1
+            else:
+                if row[0] == str(module_number):
+                    for i in range(1, 11):
+                        row[i] = row[i].replace(",", ".")
+
+                    module_data.append(row[0])
+                    module_data.append(format(float(row[1]), ".3f"))
+                    module_data.append(format(float(row[2]), ".1f"))
+                    module_data.append(format(float(row[3]), ".3f"))
+                    module_data.append(format(float(row[4]), ".0f"))
+                    module_data.append(format(float(row[5]), ".3f"))
+                    module_data.append(format(float(row[6]), ".0f"))
+                    module_data.append(format(float(row[7]) / 100, ".2f"))
+                    module_data.append(format(float(row[8]), ".3f"))
+                    module_data.append(format(float(row[9]), ".3f"))
+                    module_data.append(format(float(row[10]), ".3f"))
+                line_count += 1
+
+    if len(module_data) != 0:
+        return module_data
+    else:
+        return ["Error: module #" + str(module_number) + " not found"]
+
 
 # temperatura
 def report_temperature(file_temp):

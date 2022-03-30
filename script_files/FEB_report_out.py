@@ -1,4 +1,5 @@
 from __future__ import print_function
+from audioop import bias
 from pickle import FALSE, TRUE
 from mailmerge import MailMerge
 from datetime import date
@@ -10,6 +11,7 @@ from FEB_report_fun import (
     report_temperature,
     report_thrdisp,
     text_to_pdf,
+    get_bias_data,
 )
 from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
 import re
@@ -96,10 +98,9 @@ def print_report(num_report):
 start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
-print(str(format(5.7, ".3f")))
-
 for i in range(start, stop + 1):
     report_data = print_report(i)
+    bias_data = get_bias_data(i)
     document = MailMerge("../report_template/test_report_FEB.docx")
 
     if report_data[0]:
@@ -122,7 +123,16 @@ for i in range(start, stop + 1):
             author="L. Ghislotti",
             asic_ID=ID_number,
             nation_word="Italian",
-            # TODO Bias
+            AVDD=bias_data[1],
+            IVDD=bias_data[2],
+            DVDD=bias_data[3],
+            IDVDD=bias_data[4],
+            treVtre=bias_data[5],
+            ItreVtre=bias_data[6],
+            Ibias=bias_data[7],
+            VCMSH=bias_data[8],
+            VCM=bias_data[9],
+            RVCM=bias_data[10],
             temp_ADC=report_data[1][0],
             temp_T=report_data[1][1],
             no_resp_ch="0",
