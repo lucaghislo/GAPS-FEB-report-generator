@@ -2,7 +2,6 @@ from __future__ import print_function
 from audioop import bias
 from pickle import FALSE, TRUE
 from mailmerge import MailMerge
-from datetime import date
 from docx2pdf import convert
 
 from FEB_report_fun import (
@@ -12,6 +11,7 @@ from FEB_report_fun import (
     report_thrdisp,
     text_to_pdf,
     get_bias_data,
+    read_config_file,
 )
 from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
 import re
@@ -19,7 +19,6 @@ import math
 from matplotlib import lines
 import os
 from pathlib import Path
-from datetime import date
 
 
 # acquisizione directory
@@ -101,6 +100,7 @@ stop = int(input(" Range STOP: "))
 for i in range(start, stop + 1):
     report_data = print_report(i)
     bias_data = get_bias_data(i)
+    config_data = read_config_file()
     document = MailMerge("../report_template/test_report_FEB.docx")
 
     if report_data[0]:
@@ -111,18 +111,15 @@ for i in range(start, stop + 1):
         else:
             ID_number = str(i)
 
-        today = date.today()
-        today = today.strftime("%d.%m.%Y")
-
         document.merge(
             board_ID_title=ID_number,
-            nation_letter="I",
-            board_ID="F" + str(ID_number) + "I",
-            doc_version="0.1",
-            date=today,
-            author="L. Ghislotti",
+            nation_letter=config_data[0],
+            board_ID="F" + str(ID_number) + str(config_data[0]),
+            doc_version=config_data[1],
+            date=config_data[2],
+            author=config_data[3],
             asic_ID=ID_number,
-            nation_word="Italian",
+            nation_word=config_data[4],
             AVDD=bias_data[1],
             IVDD=bias_data[2],
             DVDD=bias_data[3],

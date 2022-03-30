@@ -1,10 +1,62 @@
 import re
 import math
+from unittest import case
 from matplotlib import lines
 import os
 import textwrap
 from fpdf import FPDF
 import csv
+import re
+from datetime import date
+
+# configuration import
+def read_config_file():
+    counter = 0
+    lines = []
+
+    nation_letter = ""
+    doc_version = ""
+    data = ""
+    author = ""
+    nation_word = ""
+
+    with open("../configuration/config.conf") as f:
+        lines = f.readlines()
+
+        nation_letter = re.search(
+            "nation_letter = '(.*?)';        # nationality letter identifier",
+            str(lines[0]),
+        ).group(1)
+
+        doc_version = re.search(
+            "doc_version = '(.*?)';        # document version",
+            str(lines[1]),
+        ).group(1)
+
+        data = re.search(
+            "date = '(.*?)';        # if empty date is set to current date",
+            str(lines[2]),
+        ).group(1)
+
+        if data == "":
+            today = date.today()
+            today = today.strftime("%d.%m.%Y")
+            data = today
+
+        author = re.search(
+            "author = '(.*?)';    # report author",
+            str(lines[3]),
+        ).group(1)
+
+        nation_word = re.search(
+            "nation_word = '(.*?)';    # nationality identifier word",
+            str(lines[4]),
+        ).group(1)
+
+        counter = counter + 1
+
+    return [nation_letter, doc_version, data, author, nation_word]
+
 
 # report_output.txt
 dir_txt = os.path.dirname(__file__)
@@ -23,7 +75,6 @@ def get_bias_data(module_number):
 
         for row in csv_reader:
             if line_count == 0:
-                print(f'Column names are {", ".join(row)}')
                 line_count += 1
             else:
                 if row[0] == str(module_number):
