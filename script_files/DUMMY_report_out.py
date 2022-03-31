@@ -23,29 +23,30 @@ for i in range(start, stop + 1):
     config_data = read_config_file()
     document = MailMerge("../report_template/test_report_DUMMY.docx")
 
-    if i < 10:
-        ID_number = "0" + str(i)
-    elif i < 100:
-        ID_number = str(i)
+    if bias_data[1]:
+        if i < 10:
+            ID_number = "0" + str(i)
+        elif i < 100:
+            ID_number = str(i)
 
-    print("\nDUMMY D" + str(i) + "-" + str(ID_number))
+        print("\nDUMMY D" + str(i) + "-" + str(ID_number))
 
-    document.merge(
-        dummy_D1=str(i),
-        dummy_ID1=ID_number,
-        dummy_D2=str(i),
-        dummy_ID2=ID_number,
-        doc_version=config_data[1],
-        date=config_data[2],
-        author=config_data[3],
-        temp=bias_data[3],
-        AVDD=bias_data[1],
-        IVDD=bias_data[2],
-        notes=bias_data[4],
-    )
+        document.merge(
+            dummy_D1=str(i),
+            dummy_ID1=ID_number,
+            dummy_D2=str(i),
+            dummy_ID2=ID_number,
+            doc_version=config_data[1],
+            date=config_data[2],
+            author=config_data[3],
+            temp=bias_data[0][3],
+            AVDD=bias_data[0][1],
+            IVDD=bias_data[0][2],
+            notes=bias_data[0][4],
+        )
 
-    document.write("../report_word/D" + str(i) + "-" + str(ID_number) + ".docx")
-    convert(
-        "../report_word/D" + str(i) + "-" + str(ID_number) + ".docx",
-        "../report_PDF/D" + str(i) + "-" + str(ID_number) + ".pdf",
-    )
+        document.write("../report_word/D" + str(i) + "-" + str(ID_number) + ".docx")
+        convert(
+            "../report_word/D" + str(i) + "-" + str(ID_number) + ".docx",
+            "../report_PDF/D" + str(i) + "-" + str(ID_number) + ".pdf",
+        )

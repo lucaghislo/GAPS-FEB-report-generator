@@ -14,6 +14,7 @@ from FEB_report_fun import (
     read_config_file,
     defect_notes,
 )
+
 from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
 import re
 import math

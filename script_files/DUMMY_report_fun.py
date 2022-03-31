@@ -61,6 +61,7 @@ def read_config_file():
 # bias readings
 def get_bias_data(module_number):
     module_data = []
+    flag = False
 
     with open("../CSV_tables/DUMMY_testing - Multimeter.csv") as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=",")
@@ -80,6 +81,8 @@ def get_bias_data(module_number):
                     module_data.append(format(float(row[3]), ".1f"))
                     module_data.append(row[4])
 
+                    flag = True
+
                 line_count += 1
 
-    return module_data
+    return [module_data, flag]
