@@ -84,9 +84,6 @@ def print_report(num_report):
 
     if Path(file_ped).is_file():
         pedestal_data = report_pedestal(file_ped)
-        ftxt_a.write(" \n")
-        ftxt_a.write("----------------------------------------------\n")
-        ftxt_a.write(" \n")
 
     return [flag, temp_data, ENC_data, thrdisp_data, pedestal_data]
 
@@ -97,9 +94,9 @@ stop = int(input(" Range STOP: "))
 
 for i in range(start, stop + 1):
     report_data = print_report(i)
-    bias_data = get_bias_data(i)
     config_data = read_config_file()
     report_notes = defect_notes(i)
+
     document = MailMerge("../report_template/test_report_FEB.docx")
 
     if report_data[0]:
@@ -111,6 +108,8 @@ for i in range(start, stop + 1):
             ID_number = str(i)
 
         print("\nMODULE F" + str(ID_number) + config_data[0])
+
+        bias_data = get_bias_data(i)
 
         document.merge(
             board_ID_title=ID_number,
@@ -157,4 +156,4 @@ ftxt_a.close()
 
 text = ftxt_r.read()
 ftxt_r.close()
-text_to_pdf(text, "../report_output.pdf")
+text_to_pdf(text, "../FEB_report_log.pdf")

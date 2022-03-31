@@ -60,7 +60,7 @@ def read_config_file():
 
 # report_output.txt
 dir_txt = os.path.dirname(__file__)
-file_txt = os.path.join(dir_txt, "../report_output.txt")
+file_txt = os.path.join(dir_txt, "../FEB_report_log.txt")
 ftxt_w = open(file_txt, "w+")
 ftxt_a = open(file_txt, "a")
 ftxt_r = open(file_txt, "r")
@@ -93,9 +93,29 @@ def get_bias_data(module_number):
                     module_data.append(format(float(row[9]), ".3f"))
                     module_data.append(format(float(row[10]), ".3f"))
 
+                    flag = True
+
                 line_count += 1
 
     if len(module_data) != 0:
+        if flag:
+            ftxt_a.write("\n*** BIAS ***\n\n")
+            ftxt_a.write("  AVDD [V]: " + str(module_data[1]) + "\n")
+            ftxt_a.write(" IVDD [mA]: " + str(module_data[2]) + "\n")
+            ftxt_a.write("  DVDD [V]: " + str(module_data[3]) + "\n")
+            ftxt_a.write("IDVDD [mA]: " + str(module_data[4]) + "\n")
+            ftxt_a.write("   3V3 [V]: " + str(module_data[5]) + "\n")
+            ftxt_a.write(" I3V3 [mA]: " + str(module_data[6]) + "\n")
+            ftxt_a.write("Ibias [mA]: " + str(module_data[7]) + "\n")
+            ftxt_a.write(" VCMSH [V]: " + str(module_data[8]) + "\n")
+            ftxt_a.write("   VCM [V]: " + str(module_data[9]) + "\n")
+            ftxt_a.write("  RVCM [V]: " + str(module_data[10]) + "\n")
+
+            for i in range(1, 43):
+                ftxt_a.write(" \n")
+
+            flag = False
+
         return module_data
     else:
         return ["Error: module #" + str(module_number) + " not found"]

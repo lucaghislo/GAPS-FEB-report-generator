@@ -22,8 +22,60 @@ Before FT [DAC]: 5.316
 *** PEDESTAL DISPERSION ***
 
 Pedestal dispersion [ADC]: 31.385
+
+*** BIAS ***
+
+  AVDD [V]: 1.796
+ IVDD [mA]: 135.4
+  DVDD [V]: 1.792
+IDVDD [mA]: 5
+   3V3 [V]: 2.986
+ I3V3 [mA]: 4
+Ibias [mA]: 4.94
+ VCMSH [V]: 1.198
+   VCM [V]: 0.890
+  RVCM [V]: 0.898
  
-----------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 ***** MODULE F183I ******
 
@@ -49,8 +101,60 @@ Before FT [DAC]: 5.687
 *** PEDESTAL DISPERSION ***
 
 Pedestal dispersion [ADC]: 28.349
+
+*** BIAS ***
+
+  AVDD [V]: 1.795
+ IVDD [mA]: 134.6
+  DVDD [V]: 1.796
+IDVDD [mA]: 5
+   3V3 [V]: 2.991
+ I3V3 [mA]: 3
+Ibias [mA]: 4.97
+ VCMSH [V]: 1.197
+   VCM [V]: 0.890
+  RVCM [V]: 0.897
  
-----------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 ***** MODULE F226I ******
 
@@ -76,8 +180,60 @@ Before FT [DAC]: 6.090
 *** PEDESTAL DISPERSION ***
 
 Pedestal dispersion [ADC]: 29.334
+
+*** BIAS ***
+
+  AVDD [V]: 1.797
+ IVDD [mA]: 138.7
+  DVDD [V]: 1.796
+IDVDD [mA]: 5
+   3V3 [V]: 2.998
+ I3V3 [mA]: 4
+Ibias [mA]: 4.96
+ VCMSH [V]: 1.198
+   VCM [V]: 0.891
+  RVCM [V]: 0.899
  
-----------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 ***** MODULE F251I ******
 
@@ -103,6 +259,58 @@ Before FT [DAC]: 4.535
 *** PEDESTAL DISPERSION ***
 
 Pedestal dispersion [ADC]: 32.542
+
+*** BIAS ***
+
+  AVDD [V]: 1.799
+ IVDD [mA]: 136.7
+  DVDD [V]: 1.797
+IDVDD [mA]: 5
+   3V3 [V]: 2.995
+ I3V3 [mA]: 3
+Ibias [mA]: 4.98
+ VCMSH [V]: 1.200
+   VCM [V]: 0.892
+  RVCM [V]: 0.900
  
-----------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
