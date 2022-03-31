@@ -49,7 +49,7 @@ def read_config_file():
         ).group(1)
 
         nation_word = re.search(
-            "nation_word = '(.*?)'      # nationality identifier word",
+            "nation_word = '(.*?)'     # nationality identifier word",
             lines[4],
         ).group(1)
 
