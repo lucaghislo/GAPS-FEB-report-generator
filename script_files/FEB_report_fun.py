@@ -92,6 +92,7 @@ def get_bias_data(module_number):
                     module_data.append(format(float(row[8]), ".3f"))
                     module_data.append(format(float(row[9]), ".3f"))
                     module_data.append(format(float(row[10]), ".3f"))
+
                 line_count += 1
 
     if len(module_data) != 0:
