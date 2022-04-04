@@ -205,7 +205,7 @@ def report_thrdisp(file_thr):
     with open(file_thr) as f:
         lines_tr = f.readlines()
 
-    str_tr = lines_tr[13]
+    str_tr = lines_tr[14]
     list_tr = str_tr.split("\t")
     ftxt_a.write("\n*** THRESHOLD DISPERSION ***\n")
     ftxt_a.write("\nBefore FT [DAC]: " + format(float(list_tr[3]), ".3f") + "\n")
