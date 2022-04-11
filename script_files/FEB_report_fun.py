@@ -110,9 +110,7 @@ def get_bias_data(module_number):
             ftxt_a.write(" VCMSH [V]: " + str(module_data[8]) + "\n")
             ftxt_a.write("   VCM [V]: " + str(module_data[9]) + "\n")
             ftxt_a.write("  RVCM [V]: " + str(module_data[10]) + "\n")
-
-            for i in range(1, 43):
-                ftxt_a.write(" \n")
+            ftxt_a.write("\n")
 
             flag = False
 
@@ -319,7 +317,7 @@ def defect_notes(module_number):
                         else:
                             notes = notes + "\n" + "solid defect on bottom"
 
-                    if row[7] != "":
+                    if row[7] != "OK":
                         if not (flag):
                             notes = notes + str(row[7])
                             flag = True

@@ -145,6 +145,12 @@ for i in range(start, stop + 1):
             notes=report_notes,
         )
 
+        ftxt_a.write("*** NOTES ***\n")
+        ftxt_a.write("\n" + report_notes + "\n")
+
+        for i in range(1, 39):
+            ftxt_a.write(" \n")
+
         document.write("../report_word/F" + str(ID_number) + "I" + ".docx")
         convert(
             "../report_word/F" + str(ID_number) + "I" + ".docx",
