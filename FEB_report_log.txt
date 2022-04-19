@@ -1,125 +1,46 @@
-***** MODULE F201I ******
+***** MODULE F125I ******
 
 *** TEMPERATURE SENSOR ***
 
-Temperature sensor [ADC]: 1046
- Temperature sensor [°C]: 26.432
+Temperature sensor [ADC]: 1069
+ Temperature sensor [°C]: 28.292
 
 *** NOISE ENC [keV] ***
 
- Canale 0: 21.215
- Canale 7: 109.308
-Canale 15: 28.637
-Canale 16: 26.297
-Canale 23: 132.937
-Canale 31: 24.129
+ Canale 0: 2.703
+ Canale 7: 7.644
+Canale 15: 4.733
+Canale 16: 3.358
+Canale 23: 10.964
+Canale 31: 3.026
 
 *** THRESHOLD DISPERSION ***
 
-Before FT [DAC]: 5.564
- After FT [DAC]: 3.368
+Before FT [DAC]: 5.394
+ After FT [DAC]: 2.936
 
 *** PEDESTAL DISPERSION ***
 
-Pedestal dispersion [ADC]: 30.288
+Pedestal dispersion [ADC]: 2.723
 
 *** BIAS ***
 
-  AVDD [V]: 1.803
- IVDD [mA]: 136.9
-  DVDD [V]: 1.800
+  AVDD [V]: 1.798
+ IVDD [mA]: 137.1
+  DVDD [V]: 1.797
 IDVDD [mA]: 5
-   3V3 [V]: 2.990
+   3V3 [V]: 2.996
  I3V3 [mA]: 4
-Ibias [mA]: 5.00
- VCMSH [V]: 1.203
-   VCM [V]: 0.894
-  RVCM [V]: 0.902
+Ibias [mA]: 4.97
+ VCMSH [V]: 1.199
+   VCM [V]: 0.891
+  RVCM [V]: 0.899
 
 *** NOTES ***
 
-scratches on top
 scratches on bottom
+solid defect on bottom
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-***** MODULE F211I ******
-
-*** TEMPERATURE SENSOR ***
-
-Temperature sensor [ADC]: 1033
- Temperature sensor [°C]: 25.380
-
-*** NOISE ENC [keV] ***
-
- Canale 0: 20.061
- Canale 7: 134.675
-Canale 15: 29.725
-Canale 16: 27.737
-Canale 23: 129.736
-Canale 31: 22.190
-
-*** THRESHOLD DISPERSION ***
-
-Before FT [DAC]: 5.121
- After FT [DAC]: 2.700
-
-*** PEDESTAL DISPERSION ***
-
-Pedestal dispersion [ADC]: 30.051
-
-*** BIAS ***
-
-  AVDD [V]: 1.795
- IVDD [mA]: 135.1
-  DVDD [V]: 1.799
-IDVDD [mA]: 5
-   3V3 [V]: 2.998
- I3V3 [mA]: 3
-Ibias [mA]: 4.94
- VCMSH [V]: 1.197
-   VCM [V]: 0.890
-  RVCM [V]: 0.898
-
-*** NOTES ***
-
-not working
  
  
  

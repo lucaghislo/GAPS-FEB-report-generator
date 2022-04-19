@@ -15,7 +15,7 @@ from FEB_report_fun import (
     defect_notes,
 )
 
-from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r
+from FEB_report_fun import ftxt_a, ftxt_w, ftxt_r, ftxt_w1, ftxt_w2
 import re
 import math
 from matplotlib import lines
@@ -110,7 +110,6 @@ for i in range(start, stop + 1):
         print("\nMODULE F" + str(ID_number) + config_data[0])
 
         bias_data = get_bias_data(i)
-
         document.merge(
             board_ID_title=ID_number,
             nation_letter=config_data[0],
@@ -147,6 +146,9 @@ for i in range(start, stop + 1):
 
         ftxt_a.write("*** NOTES ***\n")
         ftxt_a.write("\n" + report_notes + "\n")
+
+        ftxt_w1.write(report_data[1][0] + ",\n")
+        ftxt_w2.write(report_data[1][1] + ",\n")
 
         for i in range(1, 39):
             ftxt_a.write(" \n")

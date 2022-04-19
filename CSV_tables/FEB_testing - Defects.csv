@@ -67,8 +67,75 @@
 145,x,,,,,,
 159,,,,x,x,x,lots of scratches on bottom
 201,x,,,x,,,
-211,,,,,,,not working
+211,,,,,,,OK
 220,,,,,,,OK
 193,,,,,x,,
 183,,,,x,x,,
 191,x,,,,,,
+130,,,,,,,OK
+37,,,,,,,cannot set an even address (only odd addresses working)
+5,,,,,,,OK
+266,,,,x,,,
+269,,,,,,,OK
+100,,,,x,,,
+54,,,,,,,OK
+6,,,,x,,,
+276,,,,,,,OK
+271,,,,,,,OK
+62,,,,,,,OK
+86,x,,,,,,
+268,,,,x,,,unknown substance on top
+96,,,,,,,OK
+244,,,,,,x,
+168,,,,,,x,
+184,,,,x,x,,
+48,,,,,x,x,large solid defects on bottom
+157,,,,,x,,
+20,,,,,,,OK
+40,x,,,x,,,
+240,,,,,,,missing capacitor on LDO output path
+246,,,,,,,
+250,,,,,x,,
+260,x,,,,,,
+237,,,,x,,x,
+229,,,,x,x,x,
+189,,,,,,,OK
+270,,,,,,,OK
+176,,,,x,,x,
+272,,,,,,,OK
+239,,,,x,x,x,
+277,,,,,,,OK
+70,x,,,,,,
+95,,,,,,,address switch selector is installed upside down
+124,,,,,,,OK
+284,x,,,x,,,
+275,,,,,,,OK
+133,,,,,,,OK
+235,,,,,x,,
+259,x,,,,,,large scratch on top
+190,,,,x,,,
+180,,,,,,,OK
+167,x,,,,,x,
+216,,,,,x,,
+210,x,,,,,,
+65,,,x,,x,x,
+122,,,x,x,,,
+92,,,,,,,OK
+291,,,,,,,OK
+263,,,,,,,OK
+136,,,,,,,OK
+142,,,,,,x,thin bottom silk screen in some places
+285,,,,,,,thin bottom silk screen in some places
+288,,,,x,,,thin bottom silk screen in some places
+72,,,,,,,OK
+94,x,,,x,,,
+123,x,,,x,,,
+71,,,,,,,OK
+293,,,,,,,OK
+34,x,,,,,,
+127,,,,x,x,x,large scratches on bottom and exposed copper
+200,,,,x,,,address switch not working for all addresses
+143,,,,x,x,,
+125,,,,x,,x,
+274,,,,x,,,
+267,,,,x,,,
