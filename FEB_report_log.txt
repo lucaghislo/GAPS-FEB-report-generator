@@ -1,45 +1,45 @@
-***** MODULE F125I ******
+***** MODULE F529I ******
 
 *** TEMPERATURE SENSOR ***
 
-Temperature sensor [ADC]: 1069
- Temperature sensor [°C]: 28.292
+Temperature sensor [ADC]: 1085
+ Temperature sensor [°C]: 29.584
 
 *** NOISE ENC [keV] ***
 
- Canale 0: 2.703
- Canale 7: 7.644
-Canale 15: 4.733
-Canale 16: 3.358
-Canale 23: 10.964
-Canale 31: 3.026
+ Canale 0: 6.467
+ Canale 7: 26.471
+Canale 15: 7.277
+Canale 16: 17.202
+Canale 23: 27.355
+Canale 31: 12.229
 
 *** THRESHOLD DISPERSION ***
 
-Before FT [DAC]: 5.394
- After FT [DAC]: 2.936
+Before FT [DAC]: 3.636
+ After FT [DAC]: 1.409
 
 *** PEDESTAL DISPERSION ***
 
-Pedestal dispersion [ADC]: 2.723
+Pedestal dispersion [ADC]: 8.115
 
 *** BIAS ***
 
-  AVDD [V]: 1.798
- IVDD [mA]: 137.1
-  DVDD [V]: 1.797
+  AVDD [V]: 1.797
+ IVDD [mA]: 134.2
+  DVDD [V]: 14.190
 IDVDD [mA]: 5
-   3V3 [V]: 2.996
- I3V3 [mA]: 4
-Ibias [mA]: 4.97
+   3V3 [V]: 18.370
+ I3V3 [mA]: 3
+Ibias [mA]: 4.92
  VCMSH [V]: 1.199
-   VCM [V]: 0.891
+   VCM [V]: 0.884
   RVCM [V]: 0.899
 
 *** NOTES ***
 
+scratches on top
 scratches on bottom
-solid defect on bottom
 
  
  

@@ -153,10 +153,10 @@ for i in range(start, stop + 1):
         for i in range(1, 39):
             ftxt_a.write(" \n")
 
-        document.write("../report_word/F" + str(ID_number) + "I" + ".docx")
+        document.write("../report_word/F" + str(ID_number) + config_data[0] + ".docx")
         convert(
-            "../report_word/F" + str(ID_number) + "I" + ".docx",
-            "../report_PDF/F" + str(ID_number) + "I" + ".pdf",
+            "../report_word/F" + str(ID_number) + config_data[0] + ".docx",
+            "../report_PDF/F" + str(ID_number) + config_data[0] + ".pdf",
         )
 
 ftxt_w.close()
