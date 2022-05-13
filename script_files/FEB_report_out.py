@@ -92,6 +92,12 @@ def print_report(num_report):
 start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
+# script_values.txt
+dir_txt1 = os.path.dirname(__file__)
+file_txt1 = os.path.join(dir_txt1, "../script_values.csv")
+ftxt_w1 = open(file_txt1, "a")
+
+
 for i in range(start, stop + 1):
     report_data = print_report(i)
     config_data = read_config_file()
@@ -143,6 +149,8 @@ for i in range(start, stop + 1):
             ped_disp=report_data[4],
             notes=report_notes,
         )
+
+        file_txt1.write(report_data[2][0] + ',' + report_data[2][1] + ',' + report_data[2][2] + ',' + report_data[2][3] + ',' + report_data[2][4] + ',' + report_data[2][5] + ',' + report_data[3][0] + ',' + report_data[3][1] + ',' + report_data[4])
 
         ftxt_a.write("*** NOTES ***\n")
         ftxt_a.write("\n" + report_notes + "\n")
