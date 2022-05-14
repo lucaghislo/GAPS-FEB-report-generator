@@ -97,6 +97,8 @@ dir_txt1 = os.path.dirname(__file__)
 file_txt1 = os.path.join(dir_txt1, "../script_values.csv")
 ftxt_w1 = open(file_txt1, "a")
 
+file_txt1.write('ENC_0,ENC_7,ENC_15,ENC_16,ENC_23,ENC_31,thrdisp_bef,thrdisp_aft,ped_disp')
+
 
 for i in range(start, stop + 1):
     report_data = print_report(i)
@@ -169,6 +171,7 @@ for i in range(start, stop + 1):
 
 ftxt_w.close()
 ftxt_a.close()
+file_txt1.close()
 
 text = ftxt_r.read()
 ftxt_r.close()
