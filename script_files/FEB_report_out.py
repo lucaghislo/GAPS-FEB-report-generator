@@ -97,7 +97,9 @@ dir_txt1 = os.path.dirname(__file__)
 file_txt1 = os.path.join(dir_txt1, "../script_values.csv")
 ftxt_w1 = open(file_txt1, "a")
 
-file_txt1.write('ENC_0,ENC_7,ENC_15,ENC_16,ENC_23,ENC_31,thrdisp_bef,thrdisp_aft,ped_disp')
+ftxt_w1.write(
+    "ENC_0,ENC_7,ENC_15,ENC_16,ENC_23,ENC_31,thrdisp_bef,thrdisp_aft,ped_disp,\n"
+)
 
 
 for i in range(start, stop + 1):
@@ -152,7 +154,25 @@ for i in range(start, stop + 1):
             notes=report_notes,
         )
 
-        file_txt1.write(report_data[2][0] + ',' + report_data[2][1] + ',' + report_data[2][2] + ',' + report_data[2][3] + ',' + report_data[2][4] + ',' + report_data[2][5] + ',' + report_data[3][0] + ',' + report_data[3][1] + ',' + report_data[4])
+        ftxt_w1.write(
+            str(report_data[2][0])
+            + ","
+            + str(report_data[2][1])
+            + ","
+            + str(report_data[2][2])
+            + ","
+            + str(report_data[2][3])
+            + ","
+            + str(report_data[2][4])
+            + ","
+            + str(report_data[2][5])
+            + ","
+            + str(report_data[3][0])
+            + ","
+            + str(report_data[3][1])
+            + ","
+            + str(report_data[4] + ",")
+        )
 
         ftxt_a.write("*** NOTES ***\n")
         ftxt_a.write("\n" + report_notes + "\n")
@@ -171,7 +191,7 @@ for i in range(start, stop + 1):
 
 ftxt_w.close()
 ftxt_a.close()
-file_txt1.close()
+ftxt_w1.close()
 
 text = ftxt_r.read()
 ftxt_r.close()
