@@ -60,19 +60,19 @@ def read_config_file():
 
 # report_output.txt
 dir_txt = os.path.dirname(__file__)
-file_txt = os.path.join(dir_txt, "../FEB_report_log.txt")
+file_txt = os.path.join(dir_txt, "../output/FEB_report_log.txt")
 ftxt_w = open(file_txt, "w+")
 ftxt_a = open(file_txt, "a")
 ftxt_r = open(file_txt, "r")
 
 # temperature_ADC.txt
 dir_txt1 = os.path.dirname(__file__)
-file_txt1 = os.path.join(dir_txt1, "../temperature_ADC.csv")
+file_txt1 = os.path.join(dir_txt1, "../output/temperature_ADC.csv")
 ftxt_w1 = open(file_txt1, "a")
 
 # temperature_C.txt
 dir_txt2 = os.path.dirname(__file__)
-file_txt2 = os.path.join(dir_txt2, "../temperature_C.csv")
+file_txt2 = os.path.join(dir_txt2, "../output/temperature_C.csv")
 ftxt_w2 = open(file_txt2, "a")
 
 # bias readings

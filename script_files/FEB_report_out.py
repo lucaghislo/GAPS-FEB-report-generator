@@ -93,11 +93,11 @@ start = int(input("Range START: "))
 stop = int(input(" Range STOP: "))
 
 # script_values.txt
-dir_txt1 = os.path.dirname(__file__)
-file_txt1 = os.path.join(dir_txt1, "../script_values.csv")
-ftxt_w1 = open(file_txt1, "a")
+dir_txt3 = os.path.dirname(__file__)
+file_txt3 = os.path.join(dir_txt3, "../output/script_values.csv")
+ftxt_w3 = open(file_txt3, "a")
 
-ftxt_w1.write(
+ftxt_w3.write(
     "ENC_0,ENC_7,ENC_15,ENC_16,ENC_23,ENC_31,thrdisp_bef,thrdisp_aft,ped_disp,\n"
 )
 
@@ -154,7 +154,7 @@ for i in range(start, stop + 1):
             notes=report_notes,
         )
 
-        ftxt_w1.write(
+        ftxt_w3.write(
             str(report_data[2][0])
             + ","
             + str(report_data[2][1])
@@ -171,7 +171,7 @@ for i in range(start, stop + 1):
             + ","
             + str(report_data[3][1])
             + ","
-            + str(report_data[4] + ",")
+            + str(report_data[4] + ",\n")
         )
 
         ftxt_a.write("*** NOTES ***\n")
@@ -192,7 +192,8 @@ for i in range(start, stop + 1):
 ftxt_w.close()
 ftxt_a.close()
 ftxt_w1.close()
+ftxt_w3.close()
 
 text = ftxt_r.read()
 ftxt_r.close()
-text_to_pdf(text, "../FEB_report_log.pdf")
+text_to_pdf(text, "../output/FEB_report_log.pdf")
