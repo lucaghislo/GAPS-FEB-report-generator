@@ -1,3 +1,8 @@
+# FEB_report_out.py
+
+# Author: Luca Ghislotti
+# Version: 1.7.1
+
 from __future__ import print_function
 from audioop import bias
 from pickle import FALSE, TRUE
@@ -22,8 +27,7 @@ from matplotlib import lines
 import os
 from pathlib import Path
 
-
-# acquisizione directory
+# read files from directory
 def print_report(num_report):
     flag = False
     temp_data = []
@@ -31,6 +35,7 @@ def print_report(num_report):
     thrdisp_data = []
     pedestal_data = ""
 
+    # file numbering based on predefined format
     if num_report < 10:
         intermediate_path = "MODULE_00" + str(num_report)
         show = "F00" + str(i) + "I"
@@ -49,14 +54,14 @@ def print_report(num_report):
         dir_temp, "../modules/" + intermediate_path + "data/HK_Temperature.dat"
     )
 
-    # noise ENC
+    # noise ENC data
     dir_ENC = os.path.dirname(__file__)
     file_ENC = os.path.join(
         dir_ENC,
         "../modules/" + intermediate_path + "analysis_matlab/ENC/normal/ENC_normal.dat",
     )
 
-    # threshold dispersion
+    # threshold dispersion data
     dir_thr = os.path.dirname(__file__)
     file_thr = os.path.join(
         dir_thr,
@@ -65,23 +70,27 @@ def print_report(num_report):
         + "analysis_matlab/ThresholdScan/Threshold_dispersion.dat",
     )
 
-    # media pedestal
+    # pedestal mean
     dir_ped = os.path.dirname(__file__)
     file_ped = os.path.join(
         dir_ped, "../modules/" + intermediate_path + "data/Pedestals.dat"
     )
 
+    # write to log file
     if Path(file_temp).is_file():
         ftxt_a.write("***** MODULE " + show + " ******\n")
         temp_data = report_temperature(file_temp)
         flag = True
 
+    # acquire ENC data
     if Path(file_ENC).is_file():
         ENC_data = report_ENC(file_ENC)
 
+    # acquire threshold dispersion data
     if Path(file_thr).is_file():
         thrdisp_data = report_thrdisp(file_thr)
 
+    # acquire pedestal data
     if Path(file_ped).is_file():
         pedestal_data = report_pedestal(file_ped)
 
@@ -97,18 +106,21 @@ dir_txt3 = os.path.dirname(__file__)
 file_txt3 = os.path.join(dir_txt3, "../output/script_values.csv")
 ftxt_w3 = open(file_txt3, "a")
 
+# write MATLAB script-obtained data as output
 ftxt_w3.write(
     "ENC_0,ENC_7,ENC_15,ENC_16,ENC_23,ENC_31,thrdisp_bef,thrdisp_aft,ped_disp,\n"
 )
 
-
+# FEB cyclicng
 for i in range(start, stop + 1):
-    report_data = print_report(i)
-    config_data = read_config_file()
-    report_notes = defect_notes(i)
+    report_data = print_report(i)  # report data
+    config_data = read_config_file()  # configuration data
+    report_notes = defect_notes(i)  # notes on defects
 
+    # select template
     document = MailMerge("../report_template/test_report_FEB.docx")
 
+    # FEB identifier formatting
     if report_data[0]:
         if i < 10:
             ID_number = "00" + str(i)
@@ -117,9 +129,13 @@ for i in range(start, stop + 1):
         else:
             ID_number = str(i)
 
+        # write to terminal window during execution
         print("\nMODULE F" + str(ID_number) + config_data[0])
 
+        # acquire bias measurements
         bias_data = get_bias_data(i)
+
+        # write to .docx file (same fields as in template)
         document.merge(
             board_ID_title=ID_number,
             nation_letter=config_data[0],
@@ -154,6 +170,7 @@ for i in range(start, stop + 1):
             notes=report_notes,
         )
 
+        # write to .csv file
         ftxt_w3.write(
             str(report_data[2][0])
             + ","
@@ -174,6 +191,7 @@ for i in range(start, stop + 1):
             + str(report_data[4] + ",\n")
         )
 
+        # write to log file
         ftxt_a.write("*** NOTES ***\n")
         ftxt_a.write("\n" + report_notes + "\n")
 
@@ -183,17 +201,22 @@ for i in range(start, stop + 1):
         for i in range(1, 39):
             ftxt_a.write(" \n")
 
+        # save .docx file
         document.write("../report_word/F" + str(ID_number) + config_data[0] + ".docx")
+
+        # convert .docx to .pdf
         convert(
             "../report_word/F" + str(ID_number) + config_data[0] + ".docx",
             "../report_PDF/F" + str(ID_number) + config_data[0] + ".pdf",
         )
 
+# close file handlers
 ftxt_w.close()
 ftxt_a.close()
 ftxt_w1.close()
 ftxt_w3.close()
 
+# export log
 text = ftxt_r.read()
 ftxt_r.close()
 text_to_pdf(text, "../output/FEB_report_log.pdf")
