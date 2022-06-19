@@ -1,37 +1,37 @@
-***** MODULE F498I ******
+***** MODULE F334I ******
 
 *** TEMPERATURE SENSOR ***
 
-Temperature sensor [ADC]: 1064
- Temperature sensor [°C]: 27.888
+Temperature sensor [ADC]: 1103
+ Temperature sensor [°C]: 31.037
 
 *** NOISE ENC [keV] ***
 
- Canale 0: 2.580
- Canale 7: 9.481
-Canale 15: 4.265
-Canale 16: 3.276
-Canale 23: 8.722
-Canale 31: 3.089
+ Canale 0: 2.425
+ Canale 7: 2.964
+Canale 15: 3.606
+Canale 16: 2.781
+Canale 23: 3.001
+Canale 31: 2.680
 
 *** THRESHOLD DISPERSION ***
 
-Before FT [DAC]: 5.948
- After FT [DAC]: 3.377
+Before FT [DAC]: 4.692
+ After FT [DAC]: 2.405
 
 *** PEDESTAL DISPERSION ***
 
-Pedestal dispersion [ADC]: 2.786
+Pedestal dispersion [ADC]: 1.736
 
 *** BIAS ***
 
   AVDD [V]: 1.798
- IVDD [mA]: 135.1
-  DVDD [V]: 1.801
+ IVDD [mA]: 133.3
+  DVDD [V]: 1.797
 IDVDD [mA]: 5
-   3V3 [V]: 3.000
+   3V3 [V]: 2.988
  I3V3 [mA]: 3
-Ibias [mA]: 4.97
+Ibias [mA]: 4.95
  VCMSH [V]: 1.199
    VCM [V]: 0.884
   RVCM [V]: 0.899
@@ -39,7 +39,1045 @@ Ibias [mA]: 4.97
 *** NOTES ***
 
 scratches on top
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F340I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1086
+ Temperature sensor [°C]: 29.665
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 3.499
+ Canale 7: 12.364
+Canale 15: 5.795
+Canale 16: 4.541
+Canale 23: 11.980
+Canale 31: 3.783
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.125
+ After FT [DAC]: 2.109
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 4.383
+
+*** BIAS ***
+
+  AVDD [V]: 1.797
+ IVDD [mA]: 133.8
+  DVDD [V]: 1.791
+IDVDD [mA]: 5
+   3V3 [V]: 2.930
+ I3V3 [mA]: 3
+Ibias [mA]: 4.95
+ VCMSH [V]: 1.199
+   VCM [V]: 0.883
+  RVCM [V]: 0.898
+
+*** NOTES ***
+
+scratches on top
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F360I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1093
+ Temperature sensor [°C]: 30.230
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 3.206
+ Canale 7: 11.926
+Canale 15: 5.243
+Canale 16: 2.946
+Canale 23: 11.008
+Canale 31: 3.788
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.155
+ After FT [DAC]: 1.602
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 4.064
+
+*** BIAS ***
+
+  AVDD [V]: 1.798
+ IVDD [mA]: 135.5
+  DVDD [V]: 1.798
+IDVDD [mA]: 5
+   3V3 [V]: 3.000
+ I3V3 [mA]: 3
+Ibias [mA]: 4.95
+ VCMSH [V]: 1.199
+   VCM [V]: 0.883
+  RVCM [V]: 0.898
+
+*** NOTES ***
+
+scratches on top
 scratches on bottom
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F372I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1100
+ Temperature sensor [°C]: 30.795
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.202
+ Canale 7: 3.127
+Canale 15: 4.209
+Canale 16: 2.847
+Canale 23: 2.853
+Canale 31: 2.582
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.534
+ After FT [DAC]: 2.040
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.745
+
+*** BIAS ***
+
+  AVDD [V]: 1.796
+ IVDD [mA]: 136.1
+  DVDD [V]: 1.798
+IDVDD [mA]: 5
+   3V3 [V]: 2.985
+ I3V3 [mA]: 3
+Ibias [mA]: 4.97
+ VCMSH [V]: 1.198
+   VCM [V]: 0.882
+  RVCM [V]: 0.898
+
+*** NOTES ***
+
+scratches on top
+scratches on bottom
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F385I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1108
+ Temperature sensor [°C]: 31.440
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.480
+ Canale 7: 2.934
+Canale 15: 4.058
+Canale 16: 3.072
+Canale 23: 2.897
+Canale 31: 2.909
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 5.315
+ After FT [DAC]: 2.659
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.731
+
+*** BIAS ***
+
+  AVDD [V]: 1.798
+ IVDD [mA]: 133.5
+  DVDD [V]: 1.800
+IDVDD [mA]: 5
+   3V3 [V]: 2.994
+ I3V3 [mA]: 3
+Ibias [mA]: 4.97
+ VCMSH [V]: 1.199
+   VCM [V]: 0.883
+  RVCM [V]: 0.899
+
+*** NOTES ***
+
+scratches on bottom
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F392I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1105
+ Temperature sensor [°C]: 31.198
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.701
+ Canale 7: 2.990
+Canale 15: 4.830
+Canale 16: 2.775
+Canale 23: 3.441
+Canale 31: 2.895
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 5.114
+ After FT [DAC]: 2.673
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.863
+
+*** BIAS ***
+
+  AVDD [V]: 1.797
+ IVDD [mA]: 132.9
+  DVDD [V]: 1.792
+IDVDD [mA]: 5
+   3V3 [V]: 2.989
+ I3V3 [mA]: 3
+Ibias [mA]: 4.96
+ VCMSH [V]: 1.199
+   VCM [V]: 0.883
+  RVCM [V]: 0.898
+
+*** NOTES ***
+
+scratches on top
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F397I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1084
+ Temperature sensor [°C]: 29.503
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.685
+ Canale 7: 2.988
+Canale 15: 3.749
+Canale 16: 2.844
+Canale 23: 3.188
+Canale 31: 2.857
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.329
+ After FT [DAC]: 1.874
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.720
+
+*** BIAS ***
+
+  AVDD [V]: 1.795
+ IVDD [mA]: 134.6
+  DVDD [V]: 1.794
+IDVDD [mA]: 5
+   3V3 [V]: 2.990
+ I3V3 [mA]: 3
+Ibias [mA]: 4.96
+ VCMSH [V]: 1.198
+   VCM [V]: 0.882
+  RVCM [V]: 0.897
+
+*** NOTES ***
+
+scratches on top
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F399I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1091
+ Temperature sensor [°C]: 30.069
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.533
+ Canale 7: 2.900
+Canale 15: 3.531
+Canale 16: 2.761
+Canale 23: 2.869
+Canale 31: 2.371
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 5.388
+ After FT [DAC]: 2.770
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.712
+
+*** BIAS ***
+
+  AVDD [V]: 1.797
+ IVDD [mA]: 134.5
+  DVDD [V]: 1.801
+IDVDD [mA]: 5
+   3V3 [V]: 2.994
+ I3V3 [mA]: 3
+Ibias [mA]: 4.94
+ VCMSH [V]: 1.199
+   VCM [V]: 0.884
+  RVCM [V]: 0.899
+
+*** NOTES ***
+
+scratches on top
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F406I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1093
+ Temperature sensor [°C]: 30.230
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.219
+ Canale 7: 2.934
+Canale 15: 4.166
+Canale 16: 2.864
+Canale 23: 3.199
+Canale 31: 2.878
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 5.163
+ After FT [DAC]: 2.877
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.756
+
+*** BIAS ***
+
+  AVDD [V]: 1.799
+ IVDD [mA]: 135.7
+  DVDD [V]: 1.796
+IDVDD [mA]: 5
+   3V3 [V]: 2.990
+ I3V3 [mA]: 3
+Ibias [mA]: 4.98
+ VCMSH [V]: 1.200
+   VCM [V]: 0.884
+  RVCM [V]: 0.900
+
+*** NOTES ***
+
+scratches on bottom
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F416I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1083
+ Temperature sensor [°C]: 29.423
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.843
+ Canale 7: 3.212
+Canale 15: 3.856
+Canale 16: 3.079
+Canale 23: 3.358
+Canale 31: 3.142
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.649
+ After FT [DAC]: 2.402
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.794
+
+*** BIAS ***
+
+  AVDD [V]: 1.793
+ IVDD [mA]: 133.4
+  DVDD [V]: 1.799
+IDVDD [mA]: 5
+   3V3 [V]: 2.950
+ I3V3 [mA]: 3
+Ibias [mA]: 4.95
+ VCMSH [V]: 1.196
+   VCM [V]: 0.882
+  RVCM [V]: 0.897
+
+*** NOTES ***
+
+scratches on bottom
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F423I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1097
+ Temperature sensor [°C]: 30.553
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.185
+ Canale 7: 2.492
+Canale 15: 4.008
+Canale 16: 3.041
+Canale 23: 3.074
+Canale 31: 2.784
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.956
+ After FT [DAC]: 2.397
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.688
+
+*** BIAS ***
+
+  AVDD [V]: 1.798
+ IVDD [mA]: 135.7
+  DVDD [V]: 1.796
+IDVDD [mA]: 5
+   3V3 [V]: 2.995
+ I3V3 [mA]: 3
+Ibias [mA]: 4.95
+ VCMSH [V]: 1.199
+   VCM [V]: 0.884
+  RVCM [V]: 0.899
+
+*** NOTES ***
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F438I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1085
+ Temperature sensor [°C]: 29.584
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 3.057
+ Canale 7: 10.540
+Canale 15: 5.124
+Canale 16: 4.037
+Canale 23: 10.056
+Canale 31: 3.461
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 2.983
+ After FT [DAC]: 0.947
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 3.706
+
+*** BIAS ***
+
+  AVDD [V]: 1.794
+ IVDD [mA]: 135.1
+  DVDD [V]: 1.798
+IDVDD [mA]: 5
+   3V3 [V]: 2.999
+ I3V3 [mA]: 3
+Ibias [mA]: 4.95
+ VCMSH [V]: 1.197
+   VCM [V]: 0.882
+  RVCM [V]: 0.897
+
+*** NOTES ***
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F476I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1085
+ Temperature sensor [°C]: 29.584
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.470
+ Canale 7: 2.415
+Canale 15: 3.685
+Canale 16: 2.493
+Canale 23: 2.957
+Canale 31: 2.422
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 5.141
+ After FT [DAC]: 2.745
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.677
+
+*** BIAS ***
+
+  AVDD [V]: 1.792
+ IVDD [mA]: 134.7
+  DVDD [V]: 1.794
+IDVDD [mA]: 5
+   3V3 [V]: 2.994
+ I3V3 [mA]: 3
+Ibias [mA]: 4.94
+ VCMSH [V]: 1.195
+   VCM [V]: 0.881
+  RVCM [V]: 0.896
+
+*** NOTES ***
+
+scratches on top
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+***** MODULE F486I ******
+
+*** TEMPERATURE SENSOR ***
+
+Temperature sensor [ADC]: 1105
+ Temperature sensor [°C]: 31.198
+
+*** NOISE ENC [keV] ***
+
+ Canale 0: 2.363
+ Canale 7: 3.053
+Canale 15: 4.186
+Canale 16: 2.826
+Canale 23: 3.335
+Canale 31: 2.508
+
+*** THRESHOLD DISPERSION ***
+
+Before FT [DAC]: 4.952
+ After FT [DAC]: 2.451
+
+*** PEDESTAL DISPERSION ***
+
+Pedestal dispersion [ADC]: 1.797
+
+*** BIAS ***
+
+  AVDD [V]: 1.795
+ IVDD [mA]: 134.3
+  DVDD [V]: 1.797
+IDVDD [mA]: 5
+   3V3 [V]: 2.984
+ I3V3 [mA]: 3
+Ibias [mA]: 4.94
+ VCMSH [V]: 1.197
+   VCM [V]: 0.882
+  RVCM [V]: 0.897
+
+*** NOTES ***
+
 
  
  

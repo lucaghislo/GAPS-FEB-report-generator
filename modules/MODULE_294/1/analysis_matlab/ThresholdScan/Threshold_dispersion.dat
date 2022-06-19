@@ -1,0 +1,16 @@
+Come minimizzare la dispersione di soglia:
+Calcolare la media "x" delle soglie ("a" ottenute dai fit)
+1) disp_mean: per ogni coppia (canale, tempo di picco) si trova la fine_threshold che si avvicina di più alla media "x" precedentemente calcolata
+2) disp_mean_wo_outliers_1: prima del calocolo della media "x" vengono eliminati gli outliers, poi per ogni coppia (canale, tempo di picco) si trova la fine_threshold che si avvicina di più alla nuova media
+3.1) outliers: Dopo aver trovato le fine threshold che minimizzano la soglia nel metodo 1), elimino i canali che hanno una soglia troppo spostata rispetto alla media (rimozione outliers)
+3.2) disp_mean_wo_outliers_2: Calcolo la dispersione di soglia dei canali che non son stati eliminati nel punto 3.1
+-----------------------------------------------------------------------------------------------------------------------------------------
+f_thr_000	f_thr_001	f_thr_010	f_thr_011	f_thr_100	f_thr_101	f_thr_110	f_thr_111	disp_mean	disp_mean_wo_outliers_1	outliers	disp_mean_wo_outliers_2
+5.241	5.240	5.251	5.262	5.258	5.260	5.273	5.276	2.665	2.665	 9	0.632
+5.239	5.236	5.245	5.250	5.253	5.251	5.270	5.274	2.658	2.658	 9	0.638
+5.246	5.243	5.242	5.242	5.245	5.242	5.274	5.276	2.669	2.669	 9	0.646
+5.248	5.230	5.242	5.250	5.250	5.243	5.273	5.275	2.662	2.662	 9	0.650
+5.233	5.244	5.239	5.255	5.240	5.243	5.261	5.284	2.654	2.654	 9	0.635
+5.230	5.242	5.250	5.248	5.255	5.245	5.255	5.270	2.645	2.645	 9	0.644
+5.237	5.250	5.241	5.248	5.232	5.242	5.244	5.268	2.647	2.647	 9	0.642
+5.227	5.237	5.230	5.243	5.234	5.231	5.253	5.262	2.634	2.634	 9	0.627
